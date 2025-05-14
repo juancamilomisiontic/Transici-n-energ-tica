@@ -1,0 +1,40 @@
+<!-- calculadora.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Consumo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Energía Renovable</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="energias.html">Energías</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="grid-1-col">
+    <section>
+      <h2>Estimación de Energía Renovable</h2>
+      <form id="form-calculadora">
+        <label for="consumo">Consumo total (kWh):</label>
+        <input type="number" id="consumo" name="consumo" required>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="resultado">
+        <!-- Aquí se mostrará el resultado en JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Proyecto Transición Energética</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

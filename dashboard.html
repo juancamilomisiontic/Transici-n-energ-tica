@@ -1,0 +1,49 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Energético</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard Energía Renovable</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="energias.html">Energías</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="grid-2-cols">
+    <section>
+      <h2>Producción por fuente</h2>
+      <canvas id="barras"></canvas>
+    </section>
+
+    <section>
+      <h2>Participación en el consumo</h2>
+      <canvas id="torta"></canvas>
+    </section>
+
+    <section>
+      <h2>Tendencia de capacidad instalada</h2>
+      <canvas id="lineas"></canvas>
+    </section>
+
+    <section>
+      <h2>Comparación renovable vs convencional</h2>
+      <canvas id="area"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Proyecto Transición Energética</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
