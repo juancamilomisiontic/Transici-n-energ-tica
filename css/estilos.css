@@ -60,6 +60,7 @@ body {
     color: #e6f7ff;
 }
 
+/* Se hace diseño para la ventana de calculadora: */
 .layout-grid{
     /* Disposición flexible  */
     display: flex;
@@ -162,6 +163,8 @@ button#calcular-btn:hover{
     color: #fff;
 }
 
+/* Se hace el diseño para la ventana de Dashboard */
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -177,8 +180,15 @@ button#calcular-btn:hover{
 .item:nth-child(3) { grid-area: item3; }
 .item:nth-child(4) { grid-area: item4; }
 
+.item {
+  background-color: #7FFFD4;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
 
 
+/* Volver la página Responsive */
 
 @media (max-wight: 768px){
     .navbar ul{
