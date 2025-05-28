@@ -19,23 +19,44 @@
       </ul>
     </nav>
 
-  <main class="grid-1-col">
-    <section>
-      <h2>Estimación de Energía Renovable</h2>
-      <form id="form-calculadora">
-        <label for="consumo">Consumo total (kWh):</label>
-        <input type="number" id="consumo" name="consumo" required>
-        <button type="submit">Calcular</button>
-      </form>
-      <div id="resultado">
-        <!-- Aquí se mostrará el resultado en JS -->
-      </div>
-    </section>
-  </main>
+  <div class="layout-grid">
+        <main class="main-content">
+            <!-- Formulario para la calculadora de ahorro energético  -->
+             <section class="calculadora">
+                <h2>Calcula tu Ahorro de Energía</h2>
+                <form id="form_ahorro">
+                    <div class="form-group">
+                        <label for="consumo">Consumo energético actual (Kwh)</label>
+                        <input type="number" id="consumo" name="consumo" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-energia">Tipo Energía Renovable: </label>
+                        <select name="tipo-energia" id="tipo-energia" required>
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="solar">Solar</option>
+                            <option value="eolica">Eólica</option>
+                            <option value="hidrogeno">Hidrógeno</option>
+                        </select>
+                    </div>
+                    <button type="button" id="calcular-btn">Calcular Ahorro</button>
+                </form>
+             </section>
 
-  <footer>
-    <p>&copy; 2025 - Proyecto Transición Energética</p>
-  </footer>
+             <!-- Contenedor para mostar los resultados del cálculo  -->
+              <section id="resultados" class="resultados hidden">
+                <h2>Resultados Ahorro Energético</h2>
+                <div class="result-card">
+                    <p><strong>Ahorro Energético estidamo: </strong><span id="ahorro-Kwh"></span>Kwh</p>
+                    <p><strong>Reducción en Emisiones de CO2: </strong><span id="ahorro-co2"></span>Kg</p>
+                    <p><strong>Ahorro Económico Estimado: </strong><span id="ahorro-usd"></span>USD</p>
+                </div>
+              </section>
+        </main>
+    </div>
+
+  <footer class="footer">
+        <p>Creado por Juan Camilo Carvajal - <a href="mailto:Juan-camilo194@hotmail.com" class="correo">juan-camilo194@hotmail.com</a><br> Bootcamp Talento Tech 2025</p>
+    </footer>
 
   <script src="js/script.js"></script>
 </body>

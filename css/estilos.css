@@ -5,6 +5,8 @@ body {
     /* Lo que está dentro del borde */
   padding: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header{
@@ -56,4 +58,132 @@ body {
 
 .navbar ul li a:hover{
     color: #e6f7ff;
+}
+
+.layout-grid{
+    /* Disposición flexible  */
+    display: flex;
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content{
+    width: 100%;
+    display: flex;
+    /* Flexible y por columnas  */
+    flex-direction: column;
+    align-items: center;
+    /* Espaciado entre contenidos  */
+    gap: 20px;
+}
+
+/* ESTILOS DEL FORMULARIO DE LA CALCULADORA  */
+
+.calculadora{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    /* Sombreado del contenedor  */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group{
+    /* espaciado que hay desde la parte exterior y el borde solo en el lado inferior  */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* bode circular  */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button#calcular-btn{
+    background-color: #005299;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    /* Tansición del color de fondo  */
+    transition: background-color 0.3s;
+}
+
+button#calcular-btn:hover{
+    background-color: #013664;
+}
+
+/* ESTILOS PARA LOS RESULTADOS  */
+
+.resultados{
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-card{
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hidden{
+    /* Notengo disposición  */
+    display: none;
+}
+
+.footer{
+    background-color: #006bb3;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.correo{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media (max-wight: 768px){
+    .navbar ul{
+        /* Disposición sea flexible  */
+        flex-direction: column;
+    }
+
+    .main-content{
+        padding: 10px;
+    }
+    .calculadora,
+    .resultados{
+        width: 90px;
+    }
+}
+
+@media(max-width: 480px){
+    .header, .footer{
+        padding: 15px;
+    }
+
+    button#calcular-btn{
+        width: 10px;
+    }
 }
