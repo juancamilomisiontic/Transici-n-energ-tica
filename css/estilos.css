@@ -187,6 +187,25 @@ button#calcular-btn:hover{
   padding: 15px;
 }
 
+/* Estilo para los consejos de la calculadora */
+
+.tips {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.tips ul {
+  padding-left: 20px;
+}
+.tips li {
+  margin-bottom: 8px;
+}
+.hidden {
+  display: none;
+}
+
 
 /* Volver la página Responsive */
 

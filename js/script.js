@@ -49,5 +49,85 @@ document.addEventListener("DOMContentLoaded",function(){
         ahorroEconomico.toFixed(2);
 
         resultadosSection.classList.remove("hidden");
+
+        // Mostrar tips personalizados
+mostrarTips(tipoEnergia, consumo);
     });
+
+    function mostrarTips(energia, consumo) {
+  const tipsContainer = document.getElementById("tips");
+  const listaTips = document.getElementById("lista-tips");
+  listaTips.innerHTML = "";
+
+  let tips = [];
+
+  if (energia === "solar") {
+    if (consumo < 200) {
+      tips = [
+        "Aprovecha al máximo la luz natural durante el día.",
+        "Limpia regularmente tus paneles solares para mantener la eficiencia."
+      ];
+    } else if (consumo < 500) {
+      tips = [
+        "Instala electrodomésticos eficientes (etiqueta A+++).",
+        "Usa temporizadores para calentar agua solo cuando sea necesario."
+      ];
+    } else {
+      tips = [
+        "Considera expandir tu sistema solar con baterías de respaldo.",
+        "Reduce el uso de aire acondicionado durante el día con cortinas térmicas."
+      ];
+    }
+  }
+
+  if (energia === "eolica") {
+    if (consumo < 200) {
+      tips = [
+        "Apaga dispositivos que no estés usando.",
+        "Evita el uso excesivo de calefactores eléctricos."
+      ];
+    } else if (consumo < 500) {
+      tips = [
+        "Verifica la ubicación del aerogenerador para optimizar el viento.",
+        "Reduce el uso de electrodomésticos de alto consumo en horas pico."
+      ];
+    } else {
+      tips = [
+        "Realiza mantenimiento frecuente al generador eólico.",
+        "Cambia a iluminación LED en toda la casa."
+      ];
+    }
+  }
+
+  if (energia === "hidrogeno") {
+    if (consumo < 200) {
+      tips = [
+        "Utiliza calentadores de agua de alta eficiencia.",
+        "Desconecta los cargadores cuando no los uses."
+      ];
+    } else if (consumo < 500) {
+      tips = [
+        "Aprovecha sistemas híbridos que combinen hidrógeno y electricidad.",
+        "Mantén cerradas las puertas para conservar el calor/frío."
+      ];
+    } else {
+      tips = [
+        "Automatiza el encendido y apagado de sistemas eléctricos con sensores.",
+        "Evalúa los hábitos de consumo en horas pico para reducir la demanda."
+      ];
+    }
+  }
+
+  tips.forEach(tip => {
+    const li = document.createElement("li");
+    li.textContent = tip;
+    listaTips.appendChild(li);
+  });
+
+  tipsContainer.classList.remove("hidden");
+}
+
 });
+
+
+
