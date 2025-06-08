@@ -129,5 +129,37 @@ mostrarTips(tipoEnergia, consumo);
 
 });
 
+// Javascript para la pestaña de energias
+
+// Función para abrir/cerrar acordeones
+document.addEventListener('DOMContentLoaded', () => {
+  const botones = document.querySelectorAll('.accordion-btn');
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const contenido = boton.nextElementSibling;
+
+      // Cierra los demás
+      document.querySelectorAll('.accordion-content').forEach(panel => {
+        if (panel !== contenido) {
+          panel.classList.remove('show');
+          panel.previousElementSibling.textContent = 'Más información';
+        }
+      });
+
+      // Alterna el actual
+      if (contenido.classList.contains('show')) {
+        contenido.classList.remove('show');
+        boton.textContent = 'Más información';
+      } else {
+        contenido.classList.add('show');
+        boton.textContent = 'Cerrar información';
+      }
+    });
+  });
+});
+
+
+
 
 
