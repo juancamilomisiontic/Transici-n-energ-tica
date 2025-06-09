@@ -161,5 +161,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// JAVASCRIPT DE LA PESTAÑA DE INICIO
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slidesFull = document.querySelectorAll('.slide-full');
+    const prevBtnFull = document.querySelector('.prev-btn');
+    const nextBtnFull = document.querySelector('.next-btn');
+    const slideContainerFull = document.querySelector('.carousel-slide-full');
+    let currentIndexFull = 0;
+
+    function updateSlidePositionFull() {
+      slideContainerFull.style.transform = `translateX(-${currentIndexFull * 100}vw)`;
+    }
+
+    prevBtnFull.addEventListener('click', () => {
+      currentIndexFull = (currentIndexFull === 0) ? slidesFull.length - 1 : currentIndexFull - 1;
+      updateSlidePositionFull();
+    });
+
+    nextBtnFull.addEventListener('click', () => {
+      currentIndexFull = (currentIndexFull === slidesFull.length - 1) ? 0 : currentIndexFull + 1;
+      updateSlidePositionFull();
+    });
+  });
+// Función para redirigir al Dashboard (puedes ajustar la URL)
+  function irDashboard() {
+    // Cambia la URL por la de tu dashboard real
+    window.location.href = "dashboard.html"; // o "#dashboard" si es una sección
+  }
+
+
+
+
+
+
+
+
+
 
 
