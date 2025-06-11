@@ -1,167 +1,274 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inicio | Transición Energética Justa</title>
-  <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-  <header class="header">
-    <h1>Transición Energética Justa</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio | Transición Energética Justa</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Transición Energética Justa</h1>
     </header>
     <nav class="navbar">
       <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="energias.html">Energías</a></li>
-      <li><a href="calculadora.html">Calculadora</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="energias.html">Energías</a></li>
+        <li><a href="calculadora.html">Calculadora</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
 
-   <!-- Banner principal con carrusel ancho completo -->
-<section class="hero-carousel-full">
-  <div class="carousel-container-full">
-    <button class="carousel-btn prev-btn" aria-label="Anterior">&#10094;</button>
+    <!-- Banner principal con carrusel ancho completo -->
+    <section class="hero-carousel-full">
+      <div class="carousel-container-full">
+        <button class="carousel-btn prev-btn" aria-label="Anterior">
+          &#10094;
+        </button>
 
-    <div class="carousel-slide-full">
-      <div class="slide-full active">
-        <div class="slide-content">
-          <h2>Transición Energética: El Futuro es Renovable</h2>
-          <p>Explora cómo la transición energética está transformando nuestro mundo hacia fuentes limpias y renovables.</p>
+        <div class="carousel-slide-full">
+          <div class="slide-full active">
+            <div class="slide-content">
+              <h2>Transición Energética: El Futuro es Renovable</h2>
+              <p>
+                Explora cómo la transición energética está transformando nuestro
+                mundo hacia fuentes limpias y renovables.
+              </p>
+            </div>
+            <img src="img/img_solar.png" alt="Energía solar" />
+          </div>
+          <div class="slide-full">
+            <div class="slide-content">
+              <h2>Energía Solar</h2>
+              <p>
+                La energía solar aprovecha la radiación del sol para generar
+                electricidad limpia y sostenible.
+              </p>
+            </div>
+            <img src="img/img_panel.png" alt="Paneles solares" />
+          </div>
+          <div class="slide-full">
+            <div class="slide-content">
+              <h2>Energía Eólica</h2>
+              <p>
+                El viento se convierte en energía eléctrica mediante
+                aerogeneradores en parques eólicos.
+              </p>
+            </div>
+            <img src="img/img_eolico.png" alt="Parque eólico" />
+          </div>
+          <div class="slide-full">
+            <div class="slide-content">
+              <h2>Movilidad Eléctrica</h2>
+              <p>
+                Vehículos eléctricos que reducen la contaminación y dependen de
+                energías limpias.
+              </p>
+            </div>
+            <img src="img/img_movil.webp" alt="Auto eléctrico" />
+          </div>
+          <div class="slide-full">
+            <div class="slide-content">
+              <h2>Eficiencia Energética</h2>
+              <p>
+                Tecnologías y prácticas para reducir el consumo de energía y
+                minimizar el impacto ambiental.
+              </p>
+            </div>
+            <img src="img/img_eficiencia.webp" alt="Eficiencia energética" />
+          </div>
         </div>
-        <img src="img/img_solar.png" alt="Energía solar" />
+
+        <button class="carousel-btn next-btn" aria-label="Siguiente">
+          &#10095;
+        </button>
       </div>
-      <div class="slide-full">
-        <div class="slide-content">
-          <h2>Energía Solar</h2>
-          <p>La energía solar aprovecha la radiación del sol para generar electricidad limpia y sostenible.</p>
+    </section>
+
+    <!-- Sección: ¿Qué es la Transición Energética? -->
+    <section
+      class="section bg-gradient-to-r from-green-200 to-blue-300 text-gray-800 py-16 px-8"
+      id="fuentes"
+    >
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold mb-4">
+          ¿Qué es la Transición Energética?
+        </h2>
+        <p class="text-lg max-w-3xl mx-auto">
+          Es el cambio de un modelo energético basado en combustibles fósiles
+          hacia un sistema más limpio, descentralizado y eficiente, con
+          tecnologías como energía solar, eólica, hidrógeno verde, redes
+          inteligentes y almacenamiento energético.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/solar-panel.png"
+            class="mx-auto mb-4"
+            alt="solar icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">Energía Solar</h3>
+          <p class="text-center">
+            Aprovecha la luz solar para producir electricidad limpia y abundante
+            mediante paneles fotovoltaicos.
+          </p>
         </div>
-        <img src="img/img_panel.png" alt="Paneles solares" />
-      </div>
-      <div class="slide-full">
-        <div class="slide-content">
-          <h2>Energía Eólica</h2>
-          <p>El viento se convierte en energía eléctrica mediante aerogeneradores en parques eólicos.</p>
+
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/wind-turbine.png"
+            class="mx-auto mb-4"
+            alt="wind icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">Energía Eólica</h3>
+          <p class="text-center">
+            Genera energía a partir del viento con aerogeneradores eficientes y
+            silenciosos.
+          </p>
         </div>
-        <img src="img/img_eolico.png" alt="Parque eólico" />
-      </div>
-      <div class="slide-full">
-        <div class="slide-content">
-          <h2>Movilidad Eléctrica</h2>
-          <p>Vehículos eléctricos que reducen la contaminación y dependen de energías limpias.</p>
+
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/biomass.png"
+            class="mx-auto mb-4"
+            alt="biomass icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">Biomasa</h3>
+          <p class="text-center">
+            Convierte residuos orgánicos en energía térmica o eléctrica,
+            promoviendo economía circular.
+          </p>
         </div>
-        <img src="img/img_movil.webp" alt="Auto eléctrico" />
-      </div>
-      <div class="slide-full">
-        <div class="slide-content">
-          <h2>Eficiencia Energética</h2>
-          <p>Tecnologías y prácticas para reducir el consumo de energía y minimizar el impacto ambiental.</p>
+
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/hydrogen.png"
+            class="mx-auto mb-4"
+            alt="hydrogen icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">
+            Hidrógeno Verde
+          </h3>
+          <p class="text-center">
+            Combustible limpio obtenido con energías renovables, ideal para
+            transporte pesado e industria.
+          </p>
         </div>
-        <img src="img/img_eficiencia.webp" alt="Eficiencia energética" />
+
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/battery--v2.png"
+            class="mx-auto mb-4"
+            alt="battery icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">
+            Almacenamiento Energético
+          </h3>
+          <p class="text-center">
+            Baterías y sistemas avanzados que almacenan energía para uso
+            constante y confiable.
+          </p>
+        </div>
+
+        <div
+          class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://img.icons8.com/color/96/artificial-intelligence.png"
+            class="mx-auto mb-4"
+            alt="ai icon"
+          />
+          <h3 class="text-xl font-semibold mb-2 text-center">IA en Energía</h3>
+          <p class="text-center">
+            La inteligencia artificial optimiza redes, predice demanda y mejora
+            eficiencia energética.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <button class="carousel-btn next-btn" aria-label="Siguiente">&#10095;</button>
-  </div>
-</section>
-
-  <!-- Sección: ¿Qué es la Transición Energética? -->
-<section class="section bg-gradient-to-r from-green-200 to-blue-300 text-gray-800 py-16 px-8" id="fuentes">
-  <div class="text-center mb-10">
-    <h2 class="text-4xl font-bold mb-4">¿Qué es la Transición Energética?</h2>
-    <p class="text-lg max-w-3xl mx-auto">Es el cambio de un modelo energético basado en combustibles fósiles hacia un sistema más limpio, descentralizado y eficiente, con tecnologías como energía solar, eólica, hidrógeno verde, redes inteligentes y almacenamiento energético.</p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/solar-panel.png" class="mx-auto mb-4" alt="solar icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">Energía Solar</h3>
-      <p class="text-center">Aprovecha la luz solar para producir electricidad limpia y abundante mediante paneles fotovoltaicos.</p>
-    </div>
-
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/wind-turbine.png" class="mx-auto mb-4" alt="wind icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">Energía Eólica</h3>
-      <p class="text-center">Genera energía a partir del viento con aerogeneradores eficientes y silenciosos.</p>
-    </div>
-
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/biomass.png" class="mx-auto mb-4" alt="biomass icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">Biomasa</h3>
-      <p class="text-center">Convierte residuos orgánicos en energía térmica o eléctrica, promoviendo economía circular.</p>
-    </div>
-
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/hydrogen.png" class="mx-auto mb-4" alt="hydrogen icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">Hidrógeno Verde</h3>
-      <p class="text-center">Combustible limpio obtenido con energías renovables, ideal para transporte pesado e industria.</p>
-    </div>
-
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/battery--v2.png" class="mx-auto mb-4" alt="battery icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">Almacenamiento Energético</h3>
-      <p class="text-center">Baterías y sistemas avanzados que almacenan energía para uso constante y confiable.</p>
-    </div>
-
-    <div class="card shadow-lg rounded-xl p-6 bg-white hover:shadow-2xl transition-transform transform hover:scale-105">
-      <img src="https://img.icons8.com/color/96/artificial-intelligence.png" class="mx-auto mb-4" alt="ai icon"/>
-      <h3 class="text-xl font-semibold mb-2 text-center">IA en Energía</h3>
-      <p class="text-center">La inteligencia artificial optimiza redes, predice demanda y mejora eficiencia energética.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sección de Impacto -->
-<section class="section section-light bg-white text-gray-800 py-16 px-8" id="estadisticas">
-  <div class="text-center">
-    <h2 class="text-4xl font-bold mb-6">Avances en Números</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg font-medium">
-      <div class="bg-green-100 p-6 rounded-xl shadow-md">
-        🌞 +200% crecimiento en capacidad solar desde 2015
+    <!-- Sección de Impacto -->
+    <section
+      class="section section-light bg-white text-gray-800 py-16 px-8"
+      id="estadisticas"
+    >
+      <div class="text-center">
+        <h2 class="text-4xl font-bold mb-6">Avances en Números</h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg font-medium"
+        >
+          <div class="bg-green-100 p-6 rounded-xl shadow-md">
+            🌞 +200% crecimiento en capacidad solar desde 2015
+          </div>
+          <div class="bg-blue-100 p-6 rounded-xl shadow-md">
+            🌍 +80 países comprometidos con energías 100% limpias para 2050
+          </div>
+          <div class="bg-yellow-100 p-6 rounded-xl shadow-md">
+            ⚡ 60% de reducción en costos de baterías en la última década
+          </div>
+          <div class="bg-purple-100 p-6 rounded-xl shadow-md">
+            🚗 30 millones de vehículos eléctricos en circulación (2024)
+          </div>
+          <div class="bg-teal-100 p-6 rounded-xl shadow-md">
+            🧪 25% de aumento en producción de hidrógeno verde
+          </div>
+          <div class="bg-pink-100 p-6 rounded-xl shadow-md">
+            🔋 +500 GW de capacidad en almacenamiento energético global
+          </div>
+        </div>
+        <button
+          class="btn-cta mt-10 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg transition"
+          onclick="irDashboard()"
+        >
+          Ver Dashboard Interactivo
+        </button>
       </div>
-      <div class="bg-blue-100 p-6 rounded-xl shadow-md">
-        🌍 +80 países comprometidos con energías 100% limpias para 2050
-      </div>
-      <div class="bg-yellow-100 p-6 rounded-xl shadow-md">
-        ⚡ 60% de reducción en costos de baterías en la última década
-      </div>
-      <div class="bg-purple-100 p-6 rounded-xl shadow-md">
-        🚗 30 millones de vehículos eléctricos en circulación (2024)
-      </div>
-      <div class="bg-teal-100 p-6 rounded-xl shadow-md">
-        🧪 25% de aumento en producción de hidrógeno verde
-      </div>
-      <div class="bg-pink-100 p-6 rounded-xl shadow-md">
-        🔋 +500 GW de capacidad en almacenamiento energético global
-      </div>
-    </div>
-    <button class="btn-cta mt-10 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg transition" onclick="irDashboard()">
-      Ver Dashboard Interactivo
-    </button>
-  </div>
-</section>
-
-
+    </section>
 
     <footer class="footer">
-  <div class="footer-content">
-    <p>Creado por <strong>Juan Camilo Carvajal</strong></p>
-    <p>
-      <a href="mailto:juan-camilo194@hotmail.com" class="correo">juan-camilo194@hotmail.com</a>
-    </p>
-    <p>Bootcamp Talento Tech 2025</p>
+      <div class="footer-content">
+        <p>Creado por <strong>Juan Camilo Carvajal</strong></p>
+        <p>
+          <a href="mailto:juan-camilo194@hotmail.com" class="correo"
+            >juan-camilo194@hotmail.com</a
+          >
+        </p>
+        <p>Bootcamp Talento Tech 2025</p>
 
-    <div class="logos">
-      <img src="img/img_ubicua.PNG" alt="Ubicua" title="Ubicua">
-      <img src="img/img_utraining.PNG" alt="U-Training" title="U-Training">
-      <img src="img/img_caldas.PNG" alt="Universidad de Caldas" title="Universidad de Caldas">
-      <img src="img/img_antioquia.PNG" alt="Universidad de Antioquia" title="Universidad de Antioquia">
-    </div>
-  </div>
-</footer>
+        <div class="logos">
+          <img src="img/img_ubicua.PNG" alt="Ubicua" title="Ubicua" />
+          <img
+            src="img/img_utraining.PNG"
+            alt="U-Training"
+            title="U-Training"
+          />
+          <img
+            src="img/img_caldas.PNG"
+            alt="Universidad de Caldas"
+            title="Universidad de Caldas"
+          />
+          <img
+            src="img/img_antioquia.PNG"
+            alt="Universidad de Antioquia"
+            title="Universidad de Antioquia"
+          />
+        </div>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
