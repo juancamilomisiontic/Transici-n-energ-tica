@@ -200,26 +200,79 @@ button#calcular-btn:hover{
 
 /* Se hace el diseño para la ventana de Dashboard */
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-        "item1 item2"
-        "item3 item4";
-    gap: 20px;
-    padding: 20px;
+#tablaDatos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  overflow-x: auto;
+}
+#tablaDatos th,
+#tablaDatos td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
 }
 
-.item:nth-child(1) { grid-area: item1; }
-.item:nth-child(2) { grid-area: item2; }
-.item:nth-child(3) { grid-area: item3; }
-.item:nth-child(4) { grid-area: item4; }
+#tablaDatos thead {
+  background-color: #4caf50;
+  color: white;
+}
 
-.item {
-  background-color: #7FFFD4;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+#tablaDatos tr:nth-child(even) {
+  background-color: #f1f8e9;
+}
+
+#tablaDatos tr:hover {
+  background-color: #e8f5e9;
+}
+
+.main-content2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "fuente participacion"
+    "capacidad consumo"
+    "tabla tabla";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#chartFuente { grid-area: fuente; }
+#chartParticipacion { grid-area: participacion; }
+#chartCapacidad { grid-area: capacidad; }
+#chartArea { grid-area: consumo; }
+#tablaDatos { grid-area: tabla; }
+
+.grafico {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.grafico:has(#tablaDatos) {
+  grid-column: span 2;
+}
+
+.grafico:hover {
+  transform: scale(1.01);
+}
+
+.grafico h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #cfd8dc;
+  padding-bottom: 0.5rem;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
 }
 
 /* Estilo para los consejos de la calculadora */
@@ -430,14 +483,7 @@ body {
     }
   }
 
-  @media (max-width: 500px) {
-    .slide-full h2 {
-      font-size: 1.5rem;
-    }
-    .slide-full p {
-      font-size: 1rem;
-    }
-  }
+  
 
 /* Sección informativa */
 /* Estilos generales */
@@ -544,12 +590,7 @@ body {
     }
 }
 
-@media(max-width: 480px){
-    .header, .footer{
-        padding: 15px;
-    }
 
-    button#calcular-btn{
-        width: 10px;
-    }
-}
+
+
+

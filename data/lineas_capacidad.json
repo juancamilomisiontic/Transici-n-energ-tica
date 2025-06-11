@@ -1,0 +1,7 @@
+[
+  { "Año": 2018, "Eólica": 400, "Solar": 300, "Geotérmica": 150 },
+  { "Año": 2019, "Eólica": 450, "Solar": 380, "Geotérmica": 170 },
+  { "Año": 2020, "Eólica": 500, "Solar": 460, "Geotérmica": 200 },
+  { "Año": 2021, "Eólica": 600, "Solar": 550, "Geotérmica": 230 },
+  { "Año": 2022, "Eólica": 680, "Solar": 640, "Geotérmica": 270 }
+]

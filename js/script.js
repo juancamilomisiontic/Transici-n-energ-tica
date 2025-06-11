@@ -191,6 +191,94 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  // JS para la pestaña de dashboard
+
+ document.addEventListener("DOMContentLoaded", () => {
+  // Barras por fuente
+  fetch('data/barras_fuente.json')
+    .then(r => r.json())
+    .then(data => {
+      const ctx = document.getElementById('chartFuente').getContext('2d');
+      new Chart(ctx, { type:'bar',
+        data:{
+          labels: data.map(d=>d.Fuente),
+          datasets:[{ label:'Producción (GWh)', data:data.map(d=>d.Producción),
+                      backgroundColor:'rgba(54,162,235,0.6)',
+                      borderColor:'rgba(54,162,235,1)', borderWidth:1 }]
+        },
+        options:{ responsive:true }
+      });
+    });
+
+  // Torta de participación
+  fetch('data/torta_participacion.json')
+    .then(r => r.json())
+    .then(data => {
+      const ctx = document.getElementById('chartParticipacion').getContext('2d');
+      new Chart(ctx, { type:'pie',
+        data:{
+          labels: data.map(d=>d.Fuente),
+          datasets:[{ data:data.map(d=>d.Participacion),
+                      backgroundColor:['#4B8B3B','#7CB342','#FFC107','#42A5F5'] }]
+        },
+        options:{ responsive:true }
+      });
+    });
+
+  // Línea de capacidad instalada
+  fetch('data/lineas_capacidad.json')
+    .then(r => r.json())
+    .then(data => {
+      const ctx = document.getElementById('chartCapacidad').getContext('2d');
+      const labels = data.map(d=>d.Año);
+      new Chart(ctx, { type:'line',
+        data:{
+          labels,
+          datasets:[
+            {label:'Eólica', data:data.map(d=>d.Eólica), borderColor:'#4B8B3B', fill:false},
+            {label:'Solar', data:data.map(d=>d.Solar), borderColor:'#FFC107', fill:false},
+            {label:'Geotérmica', data:data.map(d=>d.Geotérmica), borderColor:'#42A5F5', fill:false}
+          ]
+        },
+        options:{ responsive:true }
+      });
+    });
+
+  // Área de consumo comparativo
+  fetch('data/area_comparativa.json')
+    .then(r => r.json())
+    .then(data => {
+      const ctx = document.getElementById('chartArea').getContext('2d');
+      const labels = data.map(d=>d.Año);
+      new Chart(ctx, { type:'line',
+        data:{
+          labels,
+          datasets:[
+            {label:'Renovable', data:data.map(d=>d.Renovable),
+             backgroundColor:'rgba(54,162,235,0.4)', fill:true},
+            {label:'Convencional', data:data.map(d=>d.Convencional),
+             backgroundColor:'rgba(201,203,207,0.4)', fill:true}
+          ]
+        },
+        options:{ responsive:true }
+      });
+    });
+
+  // Tabla con datos históricos
+  fetch('data/lineas_capacidad.json')
+    .then(r=>r.json())
+    .then(data=>{
+      const tbl = document.getElementById('tablaDatos');
+      let html = '<tr><th>Año</th><th>Eólica</th><th>Solar</th><th>Geotérmica</th></tr>';
+      data.forEach(d=>{
+        html += `<tr><td>${d.Año}</td><td>${d.Eólica}</td><td>${d.Solar}</td><td>${d.Geotérmica}</td></tr>`;
+      });
+      tbl.innerHTML = html;
+    });
+});
+
+
+
 
 
 

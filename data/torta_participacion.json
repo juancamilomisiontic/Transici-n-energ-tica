@@ -1,0 +1,6 @@
+[
+  { "Fuente": "Solar", "Participacion": 35 },
+  { "Fuente": "Eólica", "Participacion": 28 },
+  { "Fuente": "Geotérmica", "Participacion": 17 },
+  { "Fuente": "Biomasa", "Participacion": 20 }
+]

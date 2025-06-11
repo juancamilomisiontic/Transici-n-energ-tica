@@ -1,0 +1,7 @@
+[
+  { "Año": 2018, "Renovable": 2100, "Convencional": 4900 },
+  { "Año": 2019, "Renovable": 2500, "Convencional": 4700 },
+  { "Año": 2020, "Renovable": 2900, "Convencional": 4500 },
+  { "Año": 2021, "Renovable": 3400, "Convencional": 4200 },
+  { "Año": 2022, "Renovable": 3900, "Convencional": 3900 }
+]

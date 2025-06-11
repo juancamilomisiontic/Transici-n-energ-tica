@@ -1,0 +1,6 @@
+[
+  { "Fuente": "Solar", "Producción": 1200 },
+  { "Fuente": "Eólica", "Producción": 950 },
+  { "Fuente": "Geotérmica", "Producción": 480 },
+  { "Fuente": "Biomasa", "Producción": 670 }
+]
