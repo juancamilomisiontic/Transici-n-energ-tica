@@ -63,7 +63,6 @@ body {
   color: rgb(248, 248, 172);
   text-transform: uppercase;
   /* Subrayado */
-  text-decoration: underline;
   /*Sombra*/
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
